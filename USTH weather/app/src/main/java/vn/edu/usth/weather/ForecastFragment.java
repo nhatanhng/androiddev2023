@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 /**
@@ -61,6 +63,17 @@ public class ForecastFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_forecast, container, false);
         v.setBackgroundColor(0xFF00FF00); // Alpha - Red - Green - Blue
+        TextView txtvw = new TextView(getContext());
+        txtvw.setText("Thursday");
+        ImageView imageView = new ImageView(getContext());
+        imageView.setImageResource(R.drawable.cloudy);
+        LinearLayout linearLayout = v.findViewById(R.id.linearlayout);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.addView(txtvw);
+        linearLayout.addView(imageView);
+
         return v;
+
+
     }
 }

@@ -62,15 +62,32 @@ public class ForecastFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_forecast, container, false);
-        v.setBackgroundColor(0xFF00FF00); // Alpha - Red - Green - Blue
-        TextView txtvw = new TextView(getContext());
-        txtvw.setText("Thursday");
-        ImageView imageView = new ImageView(getContext());
-        imageView.setImageResource(R.drawable.cloudy);
-        LinearLayout linearLayout = v.findViewById(R.id.linearlayout);
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-        linearLayout.addView(txtvw);
-        linearLayout.addView(imageView);
+        v.setBackgroundColor(0x2000FF00); // Alpha - Red - Green - Blue
+        TextView textView = v.findViewById(R.id.item1);
+        textView.setText("Monday");
+
+        textView = v.findViewById(R.id.item2);
+        textView.setText("Tuesday");
+
+        textView = v.findViewById(R.id.item3);
+        textView.setText("Wednesday");
+
+        textView = v.findViewById(R.id.item4);
+        textView.setText("Thursday");
+
+        textView = v.findViewById(R.id.item5);
+        textView.setText("Friday");
+
+        textView = v.findViewById(R.id.item6);
+        textView.setText("Saturday");
+//        TextView txtvw = new TextView(getContext());
+//        txtvw.setText("Thursday");
+//        ImageView imageView = new ImageView(getContext());
+//        imageView.setImageResource(R.drawable.cloudy);
+//        LinearLayout linearLayout = v.findViewById(R.id.linearlayout);
+//        linearLayout.setOrientation(LinearLayout.VERTICAL);
+//        linearLayout.addView(txtvw);
+//        linearLayout.addView(imageView);
 
         return v;
 

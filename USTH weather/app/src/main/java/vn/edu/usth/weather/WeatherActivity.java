@@ -21,6 +21,11 @@ public class WeatherActivity extends AppCompatActivity {
 
         Log.i("","onCreate() Message on.");
 
+        WeatherFragment secondFragment = new WeatherFragment();
+        getSupportFragmentManager().beginTransaction().add(
+                R.id.container, secondFragment
+        ).commit();
+
     }
     @Override
     protected void onResume() {

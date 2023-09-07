@@ -1,9 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE LinearLayout [<!ELEMENT LinearLayout (fragment)*><!ATTLIST LinearLayoutxmlns:android CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:paddingLeft CDATA #REQUIREDandroid:paddingRight CDATA #REQUIREDandroid:orientation CDATA #REQUIREDtools:context CDATA #REQUIREDandroid:id CDATA #REQUIRED><!ELEMENT fragment (#PCDATA)><!ATTLIST fragmentandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:name CDATA #REQUIREDtools:layout CDATA #REQUIRED>]>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
-    android:id="@+id/container" >
+    tools:context=".WeatherActivity"
+    android:id="@+id/container">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:id="@+id/weather"
+        android:name="vn.edu.usth.weather.WeatherFragment"
+        tools:layout="@layout/fragment_weather" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/forecast"
+        android:name="vn.edu.usth.weather.ForecastFragment"
+        tools:layout="@layout/fragment_forecast" />
+
+
 </LinearLayout>

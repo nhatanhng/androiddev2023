@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE LinearLayout [<!ELEMENT LinearLayout (fragment)*><!ATTLIST LinearLayoutxmlns:android CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:paddingLeft CDATA #REQUIREDandroid:paddingRight CDATA #REQUIREDandroid:orientation CDATA #REQUIREDtools:context CDATA #REQUIREDandroid:id CDATA #REQUIRED><!ELEMENT fragment (#PCDATA)><!ATTLIST fragmentandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:name CDATA #REQUIREDtools:layout CDATA #REQUIRED>]>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

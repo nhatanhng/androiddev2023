@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+//import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
 import android.util.Log;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class WeatherActivity extends AppCompatActivity {
+    private TabLayout myTabLayout;
     private ViewPager myViewpager;
+    private MyViewPagerAdapter myViewPagerAdapter;
 
 
     @Override
@@ -31,11 +36,23 @@ public class WeatherActivity extends AppCompatActivity {
                 R.id.container, secondFragment
         ).commit();
 
-        myViewpager = findViewById(R.id.pager);
-        HomeFragmentPagerAdapter homeFragmentPagerAdapter = new HomeFragmentPagerAdapter(getSupportFragmentManager(),
+        myTabLayout = findViewById(R.id.tab_layout);
+        myViewpager = findViewById(R.id.view_pager);
+        myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager(),
                 FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        myViewpager.setOffscreenPageLimit(3);
-        myViewpager.setAdapter(homeFragmentPagerAdapter);
+
+        myViewpager.setAdapter(myViewPagerAdapter);
+        myTabLayout.setupWithViewPager(myViewpager);
+
+
+//        myViewpager = findViewById(R.id.pager);
+
+//        PagerAdapter adapter = new HomeFragmentPagerAdapter(
+//                getSupportFragmentManager());
+//        ViewPager pager = (ViewPager) findViewById(R.id.pager);
+//        pager.setOffscreenPageLimit(3);
+//        pager.setAdapter(adapter);
+
     }
     @Override
     protected void onResume() {

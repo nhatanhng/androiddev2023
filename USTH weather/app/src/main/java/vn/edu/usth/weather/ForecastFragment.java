@@ -57,24 +57,24 @@ public class ForecastFragment extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_forecast, container, false);
-//        v.setBackgroundColor(0x2000FF00); // Alpha - Red - Green - Blue
-;
-//        TextView txtvw = new TextView(getContext());
-//        txtvw.setText("Thursday");
-//        ImageView imageView = new ImageView(getContext());
-//        imageView.setImageResource(R.drawable.cloudy);
-//        LinearLayout linearLayout = v.findViewById(R.id.linearlayout);
-//        linearLayout.setOrientation(LinearLayout.VERTICAL);
-//        linearLayout.addView(txtvw);
-//        linearLayout.addView(imageView);
-
-        return v;
-
-
-    }
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        // Inflate the layout for this fragment
+//        View v = inflater.inflate(R.layout.fragment_forecast, container, false);
+////        v.setBackgroundColor(0x2000FF00); // Alpha - Red - Green - Blue
+//;
+////        TextView txtvw = new TextView(getContext());
+////        txtvw.setText("Thursday");
+////        ImageView imageView = new ImageView(getContext());
+////        imageView.setImageResource(R.drawable.cloudy);
+////        LinearLayout linearLayout = v.findViewById(R.id.linearlayout);
+////        linearLayout.setOrientation(LinearLayout.VERTICAL);
+////        linearLayout.addView(txtvw);
+////        linearLayout.addView(imageView);
+//
+//        return v;
+//
+//
+//    }
 }

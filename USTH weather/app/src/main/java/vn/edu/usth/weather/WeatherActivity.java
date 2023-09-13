@@ -1,12 +1,17 @@
 package vn.edu.usth.weather;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
 import android.util.Log;
 
 public class WeatherActivity extends AppCompatActivity {
+    private ViewPager myViewpager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,11 @@ public class WeatherActivity extends AppCompatActivity {
                 R.id.container, secondFragment
         ).commit();
 
+        myViewpager = findViewById(R.id.pager);
+        HomeFragmentPagerAdapter homeFragmentPagerAdapter = new HomeFragmentPagerAdapter(getSupportFragmentManager(),
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        myViewpager.setOffscreenPageLimit(3);
+        myViewpager.setAdapter(homeFragmentPagerAdapter);
     }
     @Override
     protected void onResume() {
